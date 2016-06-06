@@ -4,8 +4,8 @@ package MathUtils.core;
  * Created by DanDan on 6/5/2016.
  */
 public class Vector2 extends Location{
-    private float x;
-    private float y;
+    private double x;
+    private double y;
 
     public Vector2() {
         this(0,0);
@@ -15,20 +15,24 @@ public class Vector2 extends Location{
         this(vec.getX(), vec.getY());
     }
 
-    public Vector2(float x, float y) {
+    public Vector2(double x, double y) {
         set(x,y);
     }
 
 
-    public void set(float x, float y) {
+    public void set(double x, double y) {
         this.x = x;
         this.y = y;
 
         onChanged();
     }
 
+    public void set(Vector2 vec) {
+        set(vec.getX(), vec.getY());
+    }
+
     @Override
-    public float getX() {
+    public double getX() {
         return x;
     }
 
@@ -37,7 +41,7 @@ public class Vector2 extends Location{
     }
 
     @Override
-    public float getY() {
+    public double getY() {
         return y;
     }
 

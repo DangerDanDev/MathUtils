@@ -31,7 +31,7 @@ public class RelativePoint extends Location implements Location.ChangeListener{
      * @return Delta.X + source.X
      */
     @Override
-    public float getX() {
+    public double getX() {
         return source.getX() + delta.getX();
     }
 
@@ -40,7 +40,7 @@ public class RelativePoint extends Location implements Location.ChangeListener{
      * @return
      */
     @Override
-    public float getY() {
+    public double getY() {
         return source.getY() + delta.getY();
     }
 
@@ -91,6 +91,6 @@ public class RelativePoint extends Location implements Location.ChangeListener{
      */
     @Override
     public void locationChanged(Location location) {
-
+        onChanged();
     }
 }

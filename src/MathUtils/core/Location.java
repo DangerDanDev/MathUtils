@@ -7,8 +7,8 @@ import java.util.ArrayList;
  */
 public abstract class Location {
 
-    public abstract float getX();
-    public abstract float getY();
+    public abstract double getX();
+    public abstract double getY();
 
     /**
      * List of classes listening for changes
