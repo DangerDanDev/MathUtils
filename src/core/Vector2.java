@@ -1,3 +1,5 @@
+package core;
+
 /**
  * Created by DanDan on 6/5/2016.
  */

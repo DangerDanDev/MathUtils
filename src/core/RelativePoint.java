@@ -1,3 +1,5 @@
+package core;
+
 /**
  * Created by DanDan on 6/5/2016.
  */
@@ -43,7 +45,7 @@ public class RelativePoint extends Location implements Location.ChangeListener{
     }
 
     /**
-     * Returns my coordinates packed into a newly minted Vector2 object
+     * Returns my coordinates packed into a newly minted core.Vector2 object
      * @return
      */
     public Vector2 asVector2() {
