@@ -1,4 +1,4 @@
-package core;
+package MathUtils.core;
 
 import java.util.ArrayList;
 
