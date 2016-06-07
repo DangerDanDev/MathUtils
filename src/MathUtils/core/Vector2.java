@@ -27,25 +27,70 @@ public class Vector2 extends Location{
         onChanged();
     }
 
-    public void set(Vector2 vec) {
+    /**
+     * Sets my location to the same coords as another vector.
+     * Marked as final because this is a passthrough call to set(float, float); if desired functionality should
+     * be changed, override set(float, float) instead.
+     * @param vec
+     */
+    public final void set(Location vec) {
         set(vec.getX(), vec.getY());
     }
 
+    /**
+     *
+     * @return My X coordinate
+     */
     @Override
     public double getX() {
         return x;
     }
 
-    public void setX(float x) {
+    /**
+     * Pass through to set(x, getY()). Marked as final because any overrides should be done on that method--
+     * set(double, double):
+     * @param x My new X coordinate
+     */
+    public final void setX(float x) {
         set(x, getY());
     }
 
+    /**
+     *
+     * @return My Y coordinate
+     */
     @Override
-    public double getY() {
+    public final double getY() {
         return y;
     }
 
-    public void setY(float y) {
+    /**
+     * Pass through to set(getX(), y). Marked as final because any overrides should be done on that method--
+     * set(double, double):
+     * @param y My new Y coordinate
+     */
+    public final  void setY(float y) {
         set(getX(), y);
+    }
+
+    /**
+     * Translates me by the given amount. Marked as final because it utilizes a call to set(getX() + x, getY() + y);
+     * Any changes should be overridden in that method
+     * @param x Translation X
+     * @param y Translation Y
+     */
+    public final void translate(double x, double y) {
+        set(getX() + x, getY() + y);
+    }
+
+    /**
+     * Translates me by the given amount. Marked as final because it utilizes a call translate(double, double) which utilizes
+     * a call to set(getX() + x, getY() + y);
+     * Any changes should be overridden in that method
+     * @param x Translation X
+     * @param y Translation Y
+     */
+    public final void translate(Location vec) {
+        translate(vec.getX(), vec.getX());
     }
 }
