@@ -50,6 +50,11 @@ public abstract class Location {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Coords: (" + getX() + ", " + getY() + ")";
+    }
+
     /**
      * Adds a listener to my onChanged event
      * @param listener

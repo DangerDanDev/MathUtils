@@ -91,6 +91,6 @@ public class Vector2 extends Location{
      * @param y Translation Y
      */
     public final void translate(Location vec) {
-        translate(vec.getX(), vec.getX());
+        translate(vec.getX(), vec.getY());
     }
 }
