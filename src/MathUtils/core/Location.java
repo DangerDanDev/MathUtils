@@ -7,8 +7,25 @@ import java.util.ArrayList;
  */
 public abstract class Location {
 
+    /**
+     * Returns my X coordinate
+     * @return
+     */
     public abstract double getX();
+
+    /**
+     * Returns my Y coordinate
+     * @return
+     */
     public abstract double getY();
+
+    /**
+     * Returns my X and Y components in a vector2
+     * @return
+     */
+    public Vector2 asVector2() {
+        return new Vector2(getX(), getY());
+    }
 
     /**
      * List of classes listening for changes

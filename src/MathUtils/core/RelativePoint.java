@@ -45,14 +45,6 @@ public class RelativePoint extends Location implements Location.ChangeListener{
     }
 
     /**
-     * Returns my coordinates packed into a newly minted MathUtils.core.Vector2 object
-     * @return
-     */
-    public Vector2 asVector2() {
-        return new Vector2(getX(), getY());
-    }
-
-    /**
      * Gets how offset I am from my source
      * @return
      */
