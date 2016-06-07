@@ -28,6 +28,15 @@ public abstract class Location {
     }
 
     /**
+     *
+     * @param pos
+     * @return The difference between me and another location object
+     */
+    public Vector2 minus(Location pos) {
+        return new Vector2(getX() - pos.getX(), getY() - pos.getY());
+    }
+
+    /**
      * List of classes listening for changes
      */
     private ArrayList<ChangeListener> listeners = new ArrayList<>();
