@@ -56,8 +56,17 @@ public class RelativePoint extends Location implements Location.ChangeListener{
      * Sets how offset I will be from my source
      * @param delta
      */
-    public void setDelta(Vector2 delta) {
-        this.delta = new Vector2(delta);
+    public final void setDelta(Vector2 delta) {
+        setDelta(delta.getX(), delta.getY());
+    }
+
+    /**
+     * Sets how offset I will be from my source
+     * @param x OFfset X
+     * @param y Offset Y
+     */
+    public void setDelta(double x, double y) {
+        this.delta = new Vector2(x,y);
         onChanged();
     }
 
